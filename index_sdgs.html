@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0;" name="viewport" />
+    <title>wx</title>
+    <style>
+    html{
+        font-size: 16px;
+    }
+    /*html,body{
+    	font-size: 14px;
+    }*/
+    *{
+    	box-sizing:border-box;
+    	-webkit-box-sizing:border-box;
+    	margin:0;
+    	padding: 0;
+    	list-style: none;
+    	text-decoration: none;
+    }
+    a{
+    	color: #333;
+    }
+    /*#app{
+    	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    text-align: center;
+	    color: #2c3e50;
+	    font-size: 14px;
+    }*/
+    footer{
+    	display: flex;
+    	display: -webkit-flex;
+    	position: fixed;
+    	bottom: 0;
+    	left: 0;
+    	padding: 3px 0;
+    	width: 100%;
+    	background: #fafafa;
+    	border-top: 1px solid #ddd;
+    }
+    .footer-box{
+    	flex:1;
+    	text-decoration: none;
+    	text-align: center;
+    	line-height: 40px;
+    }
+    .clearfix:after{
+    	content: ".";
+    	height: 0;
+    	display: block;
+    	overflow: hidden;
+    	clear: both;
+    }
+    @media screen and (max-width: 375px) {
+        html{
+            font-size: 14px;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <div id="apps">
+    	<router-view name="content"></router-view>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

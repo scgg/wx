@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;" name="viewport">
+    <meta name="msapplication-tap-highlight" content="no">
+	<title>spa</title>
+<style>
+	html{
+        font-size: 16px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*禁止滑动时点击到a显示高亮*/
+    }
+    @media screen and (max-width: 375px){
+    	html{
+	        font-size: 16px;
+	    }
+    }
+    @media screen and (max-width: 320px){
+    	html{
+	        font-size: 12px;
+	    }
+    }
+    body{
+        /*font-family:Helvetica;*/
+        font-family:"微软雅黑";
+    }
+    /*html,body{
+    	font-size: 14px;
+    }*/
+    *{
+    	box-sizing:border-box;
+    	-webkit-box-sizing:border-box;
+    	margin:0;
+    	padding: 0;
+    	list-style: none;
+    	text-decoration: none;
+    }
+    .icon {
+	   	width: 1em; height: 1em;
+	   	vertical-align: -0.15em;
+	   	fill: currentColor;
+	   	overflow: hidden;
+	}
+    a{
+    	color: #333;
+    }
+    a:active{
+    	background: none;
+    	border:none;
+    }
+
+    footer{
+    	display: flex;
+    	display: -webkit-flex;
+    	position: fixed;
+    	bottom: 0;
+    	left: 0;
+    	padding: 3px 0;
+    	width: 100%;
+    	background: #fafafa;
+    	border-top: 1px solid #ddd;
+    	height: 49px;
+    }
+    .footer-box{
+    	flex:1;
+    	text-decoration: none;
+    	text-align: center;
+    	/*line-height: 40px;*/
+    }
+    .clearfix:after{
+    	content: ".";
+    	height: 0;
+    	display: block;
+    	overflow: hidden;
+    	clear: both;
+    }
+    a,button,input,textarea{
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        -webkit-user-modify:read-write-plaintext-only; 
+    }
+</style>
+<script>
+var setUid = 250;    //用户id
+var setName = "ponicy";  //用户名
+</script>
+</head>
+<body>
+	<div id="apps">
+		<router-view  name='content'></router-view>
+		<!-- <footer class="footer">
+	        <router-link class="wx" to="/wx">微信</router-link>
+	        <router-link class="book" to="/book">通讯录</router-link>
+	        <router-link class="find" to="/find">发现</router-link>
+	        <router-link class="me" to="/me">我</router-link>
+	    </footer> -->
+	</div>
+</body>
+</html>
